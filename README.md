@@ -12,10 +12,7 @@ Using GitHub and Binder, share your work:
 
 Click the Binder button below to open the sample Notebook.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OyBcSt/project-template-r/HEAD?labpath=index.ipynb)
-
-This example repo uses R.  ([Using Python? Check Here.](https://github.com/OyBcSt/project-template-python))
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OyBcSt/Watershed-modeling/HEAD?labpath=index.ipynb)
 
 
 # Instructions
