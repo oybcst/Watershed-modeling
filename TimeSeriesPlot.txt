@@ -1,0 +1,22 @@
+#install.packages("readxl")
+library("readxl")
+data=read_excel("Simulated_Flow_USGS02428400.xlsx")
+data
+data$Date<-as.Date(data$Date)
+library(reshape2)
+library(ggplot2)
+meltdata <- melt(data,id="Date")
+tiff("Streamflow_calibration.tiff", units="in", width=10, height=5, res=1000)
+ggplot(meltdata,aes(x=Date,y=value,color=variable,group=variable,linetype=variable)) + geom_line(size=1.2) + scale_linetype_manual(values=c(1,1,3)) +
+  scale_x_date(breaks = "14 month", minor_breaks = "1 week", date_labels = "%m/%y") + geom_vline(xintercept = as.numeric(as.Date("2015-01-01")), linetype="dotted", color="black", size=3) +
+  scale_color_manual(values=c("red", "blue", "black")) + labs(x = "", y = "Streamflow (m³/s)",
+       title = "Simulated streamflow at USGS 02428400")+
+  theme_bw()+
+  theme(axis.text.x = element_text(size=20, angle=45, hjust = 1, color = "black"),
+        axis.text.y = element_text(size=20, color = "black"),
+        legend.text = element_text(size=20),
+        legend.title = element_text(size=20),
+        plot.title = element_text(size=20),
+        axis.title=element_text(size=20))+
+  scale_y_continuous(expand = c(0,1))
+dev.off()
