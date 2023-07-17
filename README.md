@@ -7,7 +7,7 @@ streamflow, sediment, nitrate, and phosphate.
 
 Click the Binder button below to open the Notebook.  This Notebook uses R and may take a while to load the first time.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OyBcSt/Watershed-modeling/HEAD?labpath=index.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/OyBcSt/watershed-simulated-vs-observed/HEAD?labpath=index.ipynb)
 
 
 # Thank you!
